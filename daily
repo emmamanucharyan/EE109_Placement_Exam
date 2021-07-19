@@ -1,0 +1,54 @@
+#include <iostream>
+
+using namespace std;
+
+// Program should output the following messages
+// on the appropriate days of the week, running
+// infinitely
+
+// Sunday       - (no output)
+// Monday       "Back to Work"
+// Tuesday      - (no output)
+// Wednesday    "Hump day"
+// Thursday     - (no output)
+// Friday       - (no output)
+// Saturday     "Weekend!"
+
+#include <stdio.h>
+
+// Assume this function exists and does not
+// return for 24 hours of wall clock time
+void delay_1day(){
+//cout << "\n" << "24 hours passed";
+}
+
+int main()
+{
+    // Declare any additional variables here
+    int day = 0; // Let 0 = Sunday, 1 = Monday, etc.
+
+    // Infinite loop where EACH iteration correspond to one day
+
+    // You may only write **ONE** call to delay_1day() in the
+    // entire program.  This forces you to call it in the while loop
+    //  so it executes once per iteration
+    while(1) {
+
+        // Add your code here.
+        // No other loops may be used. Only assignment/arithmetic
+        //   if/else if/else, and output statements
+        if (day % 7 == 0 || day % 7 == 2 || day % 7 == 4 || day % 7 == 5){
+            cout << "" << endl;
+        } else if (day % 7 == 1){
+            cout << "Back to Work" << endl;
+        }  else if (day % 7 == 3){
+            cout << "Hump day" << endl;
+        } else {
+            cout << "Weekend!" << endl;
+        }
+        delay_1day();
+        day++;
+    }
+    // Should not reach this point
+    return 0;
+}
