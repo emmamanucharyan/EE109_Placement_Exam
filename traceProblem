@@ -1,0 +1,66 @@
+Placement test for EE109
+Name: Emma Manucharyan
+ID: 8241986777
+
+Problem#1:
+Work/Solution:
+Declared global int x;
+declared function update() that increases x by 3 and returns the initial value of x right before function was called;
+declared int i= 0;
+declared char z = 10 (ASCI);
+i = 0: (for loop iteration # 1);
+update() => x = 3
+int k = 0%5  = 0 =>
+k == 0 => z += 1 => z = 11(ASCI);
+prints: k, z(integer instead of ASCI because of %d instead of &c), x =>
+=> prints: 0,11,3;
+prints: new line
+k++ => k = 1;
+i++;
+i =1 (for loop iteration 2);
+update() => x = 6
+int k = 3%5  = 3 =>
+k == 3 => z -= 1 => z = 9(ASCI);
+prints: k, int z, x =>
+=> prints: 3,9,6;
+prints: new line
+k++ => k = 4;
+i++;
+i =2 (for loop iteration 3);
+update() => x = 9
+int k = 6%5  = 1 =>
+k == 1 => z += 4 => z = 13(ASCI);
+prints: k, int z, x =>
+=> prints: 1,13,9;
+prints: new line
+k++ => k = 2;
+i++;
+i =3 (for loop iteration 4);
+update() => x = 12
+int k = 9%5  = 4 =>
+k == 4 => z -= 2 => z =11(ASCI);
+prints: k, int z, x =>
+=> prints: 4,11,12;
+prints: new line
+k++ => k = 5;
+i++;
+i =4 (for loop iteration # 5);
+update() => x = 15
+int k = 12%5  = 2 =>
+k == 2 => z += 1 => z =12(ASCI);
+prints: k, int z, x =>
+=> prints: 2,12,15;
+prints: new line
+k++ => k = 3;
+i++;
+i = 5( i < 5 condition not met, break from loop)
+return 0 (end of code)
+
+Answer:
+0,11,3
+3,9,6
+1,13,9
+4,11,12
+2,12,15
+
+Problem # 2, 3: Attached Below
