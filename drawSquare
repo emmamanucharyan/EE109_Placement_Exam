@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+
+#include <stdio.h>
+
+// Prototype for primary function
+void drawSquare (int side, char p);
+// Prototype for given helper function
+void drawLine(int length, char first_last, char fill);
+
+// Draws a horizontal line of the given length, with the
+// given character as the first and last character on the line
+// and all other characters are set to fill
+void drawLine(int length, char first_last, char fill)
+{
+    printf("%c", first_last);
+    for(int i=0; i < length-2; i++){
+        printf("%c", fill);
+    }
+    printf("%c\n", first_last);
+}
+
+// should print an ASCII square
+// of side length, s, using character, c
+//  e.g. calling drawSquare(4, '*') should yield
+//  ****
+//  *  *
+//  *  *
+//  ****
+
+void drawSquare (int side, char p)
+{
+    // Complete your code here
+    drawLine(side, p, p);
+    for(int i = 0;i < side-2; i++ ){
+        cout << p;
+        for(int j = 0; j < side-2; j++){
+            cout << " ";
+            }
+            cout << p << endl;
+    }
+    drawLine(side, p, p);
+}
+
+int main()
+{
+    // A few sample calls to test your code
+
+    drawSquare(3, '*');
+    printf("\n");
+    drawSquare(10, '+');
+    printf("\n");
+    drawSquare(30, '-');
+}
